@@ -17,13 +17,39 @@ class ScheduleResource extends Resource
 {
     protected static ?string $model = Schedule::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard';
+    protected static ?string $navigationGroup = 'Booking Management';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('train_name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('origin')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('destination')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\DateTimePicker::make('departure_time')
+                    ->required(),
+                Forms\Components\DateTimePicker::make('arrival_time')
+                    ->required(),
+                Forms\Components\Select::make('train_class')
+                    ->options([
+                        'Economy' => 'Economy',
+                        'Business' => 'Business',
+                        'First Class' => 'First Class',
+                    ])
+                    ->required(),
+                Forms\Components\TextInput::make('available_seats')
+                    ->required()
+                    ->numeric(),
+                Forms\Components\TextInput::make('price')
+                    ->required()
+                    ->numeric(),
             ]);
     }
 
@@ -31,18 +57,21 @@ class ScheduleResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('train_name')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('origin')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('destination')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('departure_time')->dateTime()->sortable(),
+                Tables\Columns\TextColumn::make('arrival_time')->dateTime()->sortable(),
+                Tables\Columns\TextColumn::make('train_class')->sortable(),
+                Tables\Columns\TextColumn::make('available_seats')->sortable(),
+                Tables\Columns\TextColumn::make('price')->money('USD')->sortable(),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 

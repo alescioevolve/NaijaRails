@@ -4,12 +4,11 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Booking;
-use App\Models\Payment;
-use App\Models\Station;
 use App\Models\Post;
 use App\Models\User;
-use Route;
+use App\Models\Schedule;
+use App\Models\Ticket;
+use App\Models\Payment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,18 +24,13 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('admin1234'),
         // ]);
 
-        // User::factory(10)->create();
+        User::factory(10)->create();
 
-        // Booking::factory(10)->create();
+        Schedule::factory(10)->create();
+        Ticket::factory(10)->create();
+        Payment::factory(10)->create();
 
-        // Payment::factory(10)->create();
-
-        // Station::factory(10)->create();
-
-        Route::factory(10)->create();
-
-
-        // Post::factory(10)->create();
+        Post::factory(10)->create();
 
     }
 }

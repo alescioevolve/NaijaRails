@@ -12,16 +12,16 @@ return new class extends Migration {
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->integer('booking_id')->constrained('bookings')->onDelete('cascade');
+            $table->unsignedBigInteger('booking_id')->nullable();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('ticket_id')->constrained()->onDelete('cascade');
             $table->decimal('amount', 10, 2);
-            $table->string('payment_method');
-            $table->string('transaction_id');
-            $table->string('status');
-            $table->dateTime('payment_date');
+            $table->string('status')->default('pending'); // e.g., "successful", "failed"
+            $table->string('transaction_id')->unique();
             $table->timestamps();
         });
-
     }
+
     /**
      * Reverse the migrations.
      */

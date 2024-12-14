@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Payment;
+use App\Models\User;
+use App\Models\Ticket;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,13 +20,11 @@ class PaymentFactory extends Factory
     public function definition(): array
     {
         return [
-            'booking_id' => \App\Models\Booking::factory(),
-            'amount' => $this->faker->randomFloat(2, 0, 1000),
-            'payment_method' => $this->faker->randomElement(['cash', 'credit_card', 'debit_card']),
+            'user_id' => User::factory(),
+            'ticket_id' => Ticket::factory(),
+            'amount' => $this->faker->randomFloat(2, 1000, 5000),
+            'status' => $this->faker->randomElement(['successful', 'pending', 'failed']),
             'transaction_id' => $this->faker->uuid,
-            'status' => $this->faker->randomElement(['pending', 'paid', 'unpaid']),
-            'payment_date' => $this->faker->dateTimeBetween('-1 year', 'now'),
-
         ];
     }
 }

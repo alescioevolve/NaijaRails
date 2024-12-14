@@ -19,10 +19,8 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    public static function getNavigationGroup(): ?string
-    {
-        return 'User Management';
-    }
+    protected static ?string $navigationGroup = 'User Management';
+
 
     public static function getNavigationSort(): ?int
     {
@@ -41,31 +39,7 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('address')->required()->maxlength(255),
                 Forms\Components\TextInput::make('phone_number')->required()->maxlength(255)->name('residence'),
 
-                // Forms\Components\Select::make('type')
-                //     ->options([
-                //         'admin' => 'Administrator',
-                //         'user' => 'Regular User',
-                //     ])->createOptionForm([
-                //             Forms\Components\TextInput::make('name')
-                //                 ->required()
-                //                 ->maxLength(255),
-                //             Forms\Components\TextInput::make('email')
-                //                 ->label('Email address')
-                //                 ->email()
-                //                 ->required()
-                //                 ->maxLength(255),
-                //             Forms\Components\TextInput::make('phone')
-                //                 ->label('Phone number')
-                //                 ->tel()
-                //                 ->required(),
-                //         ]) // THis createOPtionForm is for creating a new option in the select field without leaving the page
-                //     ->required(),
-                // Forms\Components\DatePicker::make('date_of_birth')
-                //     ->required()
-                //     ->maxDate(now()),
-                // Forms\Components\Select::make('owner_id')
-                //     ->relationship('owner', 'name')
-                //     ->required(),
+
             ]);
 
     }
