@@ -1,16 +1,8 @@
 # Stage 1: Composer Dependencies
 FROM composer:2 AS composer-builder
-# Use a specific PHP image with required extensions
-FROM php:8.2-cli-alpine
+WORKDIR /app
 
-WORKDIR /var/www/html
-
-# Install system dependencies and PHP extensions
-RUN apk add --no-cache \
-    icu-dev \
-    && docker-php-ext-install intl
-
-# Copy composer files
+# Copy only composer files first
 COPY composer.json composer.lock ./
 
 # Install Composer dependencies
@@ -20,6 +12,12 @@ RUN composer install \
     --no-autoloader \
     --ignore-platform-reqs
 
+# Copy the rest of the project
+COPY . .
+
+# Generate autoloader
+RUN composer dump-autoload --no-dev --optimize
+
 # Stage 2: Node.js Build
 FROM node:16 AS node-builder
 WORKDIR /app
@@ -28,7 +26,7 @@ WORKDIR /app
 COPY . .
 
 # Copy Composer vendor directory from previous stage
-COPY --from=composer-builder /var/www/html/vendor /app/vendor
+COPY --from=composer-builder /app/vendor /app/vendor
 
 # Install dependencies and build the assets
 RUN npm install && npm run build
@@ -46,7 +44,7 @@ RUN apk add --no-cache \
 COPY . .
 
 # Copy Composer dependencies
-COPY --from=composer-builder /var/www/html/vendor /var/www/html/vendor
+COPY --from=composer-builder /app/vendor /var/www/html/vendor
 
 # Copy built assets from node-builder
 COPY --from=node-builder /app/build /var/www/html/public/js
