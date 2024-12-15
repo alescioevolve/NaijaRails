@@ -1,9 +1,15 @@
 # Stage 1: Build the React.js (Inertia.js) frontend
-FROM node:16 AS node-builder
+FROM node:18 AS node-builder
 WORKDIR /app
 
 # Copy the React.js frontend code
 COPY . .
+
+# Copy frontend source files
+COPY resources ./resources
+COPY vite.config.js ./
+COPY postcss.config.js ./
+COPY tailwind.config.js ./
 
 # Install dependencies and build the assets
 RUN npm install && npm run build
