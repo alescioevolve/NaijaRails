@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>NaijaRails API</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var tryItOutBaseUrl = "http://localhost:5173";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-4.38.0.js"></script>
+
+    <script src="../docs/js/theme-default-4.38.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+    </span>
+</a>
+<div class="tocify-wrapper">
+            <img src="/docs/images/logo.png" alt="logo" class="logo" style="padding-top: 10px;" width="100%"/>
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-authenticating-requests" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authenticating-requests">
+                    <a href="#authenticating-requests">Authenticating requests</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-endpoints" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
+                                <a href="#endpoints-GETapi-user">GET api/user</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-user-detail--id-">
+                                <a href="#endpoints-GETapi-user-detail--id-">Display the specified resource.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-user-list">
+                                <a href="#endpoints-GETapi-user-list">Display a listing of the resource.</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+            </div>
+
+    <ul class="toc-footer" id="toc-footer">
+                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+    </ul>
+
+    <ul class="toc-footer" id="last-updated">
+        <li>Last updated: December 15, 2024</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<p>This is the API documentation for NaijaRails.</p>
+<aside>
+    <strong>Base URL</strong>: <code>http://localhost:5173</code>
+</aside>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+                                <h2 id="endpoints-GETapi-user">GET api/user</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-user">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:5173/api/user" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:5173/api/user"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user" data-method="GET"
+      data-path="api/user"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user"
+                    onclick="tryItOut('GETapi-user');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user"
+                    onclick="cancelTryOut('GETapi-user');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-user-detail--id-">Display the specified resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-user-detail--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:5173/api/user/detail/architecto" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:5173/api/user/detail/architecto"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user-detail--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">I am Alescio and I am a full stack developer</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user-detail--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user-detail--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user-detail--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user-detail--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user-detail--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user-detail--id-" data-method="GET"
+      data-path="api/user/detail/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-detail--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user-detail--id-"
+                    onclick="tryItOut('GETapi-user-detail--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user-detail--id-"
+                    onclick="cancelTryOut('GETapi-user-detail--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user-detail--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/detail/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user-detail--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user-detail--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-user-detail--id-"
+               value="architecto"
+               data-component="url">
+    <br>
+<p>The ID of the detail. Example: <code>architecto</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="endpoints-GETapi-user-list">Display a listing of the resource.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-user-list">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:5173/api/user/list" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:5173/api/user/list"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-user-list">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">[
+    {
+        &quot;id&quot;: 22,
+        &quot;name&quot;: &quot;Jayden Dibbert&quot;,
+        &quot;email&quot;: &quot;paige01@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1 (563) 920-3217&quot;,
+        &quot;address&quot;: &quot;52072 Scottie Oval Suite 726\nDevonmouth, WY 95887-7051&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 23,
+        &quot;name&quot;: &quot;Miss Emmanuelle Bradtke III&quot;,
+        &quot;email&quot;: &quot;salvatore.harber@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1-870-447-0706&quot;,
+        &quot;address&quot;: &quot;9057 Christina Plains\nConnellyborough, VA 65429&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 24,
+        &quot;name&quot;: &quot;Prof. Cassandre Collins&quot;,
+        &quot;email&quot;: &quot;wcummerata@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1 (336) 318-6849&quot;,
+        &quot;address&quot;: &quot;516 Wilkinson Manors Suite 380\nSouth Pink, AL 75440&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 25,
+        &quot;name&quot;: &quot;Khalid Ortiz&quot;,
+        &quot;email&quot;: &quot;dax58@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1-951-963-1310&quot;,
+        &quot;address&quot;: &quot;21010 Jaskolski Points Suite 592\nBoehmmouth, NM 79400&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 26,
+        &quot;name&quot;: &quot;Tabitha Lynch&quot;,
+        &quot;email&quot;: &quot;vcummings@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1.586.868.5062&quot;,
+        &quot;address&quot;: &quot;6071 Gillian Springs Suite 352\nKilbackstad, VT 97955-2780&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 27,
+        &quot;name&quot;: &quot;Lily Bins&quot;,
+        &quot;email&quot;: &quot;kyler47@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;1-785-969-6790&quot;,
+        &quot;address&quot;: &quot;3488 Effertz Mountain\nWisokyport, MA 39044&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 28,
+        &quot;name&quot;: &quot;Murphy Huel&quot;,
+        &quot;email&quot;: &quot;onienow@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;551.809.4951&quot;,
+        &quot;address&quot;: &quot;5128 Hodkiewicz Valley\nAdaland, SC 37074-5309&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 29,
+        &quot;name&quot;: &quot;Mrs. Britney Keeling III&quot;,
+        &quot;email&quot;: &quot;lisandro.bauch@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;847-270-7340&quot;,
+        &quot;address&quot;: &quot;405 Marks Cliff Apt. 302\nEast Herman, ME 14852&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 30,
+        &quot;name&quot;: &quot;Dalton Reichel&quot;,
+        &quot;email&quot;: &quot;barney61@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1.661.383.3285&quot;,
+        &quot;address&quot;: &quot;86800 Chad Cape\nWest Sisterfurt, MN 58230-9710&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 31,
+        &quot;name&quot;: &quot;Oleta Dicki&quot;,
+        &quot;email&quot;: &quot;trisha.schmitt@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;908.684.5146&quot;,
+        &quot;address&quot;: &quot;87577 Grimes Bridge Suite 338\nNorth Ludwigburgh, NM 62530-4442&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 32,
+        &quot;name&quot;: &quot;Mrs. Margarita Johnson II&quot;,
+        &quot;email&quot;: &quot;mills.marcia@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1-435-513-7555&quot;,
+        &quot;address&quot;: &quot;30415 Deanna Groves Suite 805\nRuthborough, ID 34452&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 33,
+        &quot;name&quot;: &quot;Brielle Howe&quot;,
+        &quot;email&quot;: &quot;grunolfsson@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;1-470-724-7663&quot;,
+        &quot;address&quot;: &quot;4228 Ondricka Squares Apt. 548\nLake Wendyside, PA 66354&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 34,
+        &quot;name&quot;: &quot;Retta Fadel&quot;,
+        &quot;email&quot;: &quot;isobel22@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1.361.550.9415&quot;,
+        &quot;address&quot;: &quot;4236 Nienow Avenue\nPort Burdette, DC 54729&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 35,
+        &quot;name&quot;: &quot;Evalyn Funk&quot;,
+        &quot;email&quot;: &quot;mann.nelle@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;773.387.9657&quot;,
+        &quot;address&quot;: &quot;98968 Konopelski Hill\nNorth Shanontown, AR 60026&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 36,
+        &quot;name&quot;: &quot;Vivianne Howe&quot;,
+        &quot;email&quot;: &quot;hilpert.kaley@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1-520-339-7018&quot;,
+        &quot;address&quot;: &quot;6408 Benny Glens\nHegmannville, IA 20064&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 37,
+        &quot;name&quot;: &quot;Mariana Legros&quot;,
+        &quot;email&quot;: &quot;mkovacek@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;828-997-9892&quot;,
+        &quot;address&quot;: &quot;1160 Powlowski Motorway Apt. 711\nPort Rogeliobury, LA 57960-1271&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 38,
+        &quot;name&quot;: &quot;Jackeline Schoen&quot;,
+        &quot;email&quot;: &quot;praynor@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;907-256-3084&quot;,
+        &quot;address&quot;: &quot;69828 Adah Throughway\nMacejkovicburgh, NJ 01074&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 39,
+        &quot;name&quot;: &quot;Abdiel Howe&quot;,
+        &quot;email&quot;: &quot;schuyler.runolfsdottir@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1 (779) 270-7763&quot;,
+        &quot;address&quot;: &quot;6012 Mertz Canyon\nWest Paigeborough, PA 90748&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 40,
+        &quot;name&quot;: &quot;Wilfred Schimmel&quot;,
+        &quot;email&quot;: &quot;austen61@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;609.412.1518&quot;,
+        &quot;address&quot;: &quot;2170 Coby Cliffs Suite 214\nHoegerton, AK 70840-4406&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 41,
+        &quot;name&quot;: &quot;Therese Renner&quot;,
+        &quot;email&quot;: &quot;kathleen.larkin@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1.669.652.9709&quot;,
+        &quot;address&quot;: &quot;515 Ellie Lock Suite 293\nPort Justus, LA 48100-8437&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:23.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Candelario Lueilwitz III&quot;,
+        &quot;email&quot;: &quot;bschinner@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;1-640-871-3479&quot;,
+        &quot;address&quot;: &quot;728 Ozella Heights Suite 360\nNorth Maudemouth, IL 58646&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Roy Reilly&quot;,
+        &quot;email&quot;: &quot;ulises.cummings@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;267.250.6283&quot;,
+        &quot;address&quot;: &quot;12773 Jamie Lodge Suite 594\nEast Noahtown, NY 26934-2774&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Dr. Everardo Kessler Jr.&quot;,
+        &quot;email&quot;: &quot;roslyn23@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;847.405.2724&quot;,
+        &quot;address&quot;: &quot;8191 Kuhlman Cliff\nSouth Saige, NV 25917&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 5,
+        &quot;name&quot;: &quot;Marlin Herzog&quot;,
+        &quot;email&quot;: &quot;zemlak.augustus@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1-201-818-6404&quot;,
+        &quot;address&quot;: &quot;275 Trantow Lakes\nNorth Brendon, MT 52527-0394&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 6,
+        &quot;name&quot;: &quot;Prof. Torrance Smith&quot;,
+        &quot;email&quot;: &quot;newton.hirthe@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+13079727100&quot;,
+        &quot;address&quot;: &quot;69815 Lillie Parkways Apt. 090\nEast Benjamin, KS 21979&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 7,
+        &quot;name&quot;: &quot;Mr. Carol Barton&quot;,
+        &quot;email&quot;: &quot;rosalyn.weimann@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1-262-667-8186&quot;,
+        &quot;address&quot;: &quot;24953 Brenna Squares\nHeatherburgh, FL 59172-3858&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;name&quot;: &quot;Erich Collins&quot;,
+        &quot;email&quot;: &quot;leon.douglas@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1 (814) 507-6014&quot;,
+        &quot;address&quot;: &quot;733 Soledad Locks Apt. 977\nZechariahberg, WI 06765-0917&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;name&quot;: &quot;Eryn Terry&quot;,
+        &quot;email&quot;: &quot;aaliyah34@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;940.822.1928&quot;,
+        &quot;address&quot;: &quot;6146 Green Shoals\nMelvinshire, FL 02628-6387&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 10,
+        &quot;name&quot;: &quot;Dallas Hamill II&quot;,
+        &quot;email&quot;: &quot;qkutch@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;1-601-700-4950&quot;,
+        &quot;address&quot;: &quot;394 Katelyn Canyon\nGerholdview, MA 93946&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 11,
+        &quot;name&quot;: &quot;Theodore Hauck&quot;,
+        &quot;email&quot;: &quot;heathcote.harvey@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;720.277.9987&quot;,
+        &quot;address&quot;: &quot;66129 Jasper Skyway\nEast Kasey, FL 69829-4789&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 12,
+        &quot;name&quot;: &quot;Cesar McCullough&quot;,
+        &quot;email&quot;: &quot;lemke.nya@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1-413-486-0695&quot;,
+        &quot;address&quot;: &quot;4187 O&#039;Keefe Mall\nDarenberg, LA 89279&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 13,
+        &quot;name&quot;: &quot;Ms. Marguerite Denesik&quot;,
+        &quot;email&quot;: &quot;turcotte.holly@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;540.372.9368&quot;,
+        &quot;address&quot;: &quot;18747 Anderson Crossroad Suite 823\nPort Valentine, MA 02217&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 14,
+        &quot;name&quot;: &quot;Dr. Keegan Blanda Jr.&quot;,
+        &quot;email&quot;: &quot;abarrows@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;1-320-464-9385&quot;,
+        &quot;address&quot;: &quot;9811 Annie Centers\nDorrisview, NM 93791&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 15,
+        &quot;name&quot;: &quot;Laurel Wisozk&quot;,
+        &quot;email&quot;: &quot;heathcote.giovanna@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1 (361) 412-3873&quot;,
+        &quot;address&quot;: &quot;936 Seamus Rapid Suite 529\nBernierfurt, NH 88157&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 16,
+        &quot;name&quot;: &quot;Josianne Rempel&quot;,
+        &quot;email&quot;: &quot;talia.pollich@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;930-938-7529&quot;,
+        &quot;address&quot;: &quot;8010 Betsy Turnpike\nNew Rosalinda, OK 47273&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 17,
+        &quot;name&quot;: &quot;Miss Haven Kuhn&quot;,
+        &quot;email&quot;: &quot;yessenia90@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;+1 (507) 585-9773&quot;,
+        &quot;address&quot;: &quot;57718 Johns Estates\nLake Eldridge, SC 49640&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 18,
+        &quot;name&quot;: &quot;Travon Buckridge PhD&quot;,
+        &quot;email&quot;: &quot;nora58@example.net&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;(910) 773-3853&quot;,
+        &quot;address&quot;: &quot;5378 Oswald Shore Apt. 206\nLake Monserrat, OR 50082-5204&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 19,
+        &quot;name&quot;: &quot;Katlynn Donnelly&quot;,
+        &quot;email&quot;: &quot;bkohler@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;503-727-7243&quot;,
+        &quot;address&quot;: &quot;39329 Wiza Port\nLynnland, KY 74503-6009&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 20,
+        &quot;name&quot;: &quot;Miss Ivy Schuster PhD&quot;,
+        &quot;email&quot;: &quot;considine.jessyca@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;(231) 882-6329&quot;,
+        &quot;address&quot;: &quot;2527 Rocio Port Suite 235\nArvelport, PA 07421&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 21,
+        &quot;name&quot;: &quot;Adelle Bayer&quot;,
+        &quot;email&quot;: &quot;feeney.rosemarie@example.com&quot;,
+        &quot;email_verified_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;phone_number&quot;: &quot;650-997-7324&quot;,
+        &quot;address&quot;: &quot;9603 Klein Pike\nCartwrightfurt, WV 51933-3869&quot;,
+        &quot;created_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-12-14T00:22:22.000000Z&quot;
+    }
+]</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-user-list" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-user-list"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user-list"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-user-list" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user-list">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-user-list" data-method="GET"
+      data-path="api/user/list"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-user-list', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-user-list"
+                    onclick="tryItOut('GETapi-user-list');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-user-list"
+                    onclick="cancelTryOut('GETapi-user-list');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-user-list"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/user/list</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-user-list"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-user-list"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+            
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>
