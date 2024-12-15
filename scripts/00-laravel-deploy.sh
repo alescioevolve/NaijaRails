@@ -1,3 +1,5 @@
+#00-laravel-deploy.sh
+
 #!/usr/bin/env bash
 echo "Running npm install"
 npm install
