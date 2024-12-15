@@ -31,7 +31,7 @@ RUN php artisan config:cache && \
 WORKDIR /var/www/html
 
 # Copy built assets from node-builder
-COPY --from=node-builder /app/build /var/www/html/public/js
+COPY --from=node-builder /app/public/build /var/www/html/public/build
 
 # Docker Image Config
 ENV SKIP_COMPOSER 1
