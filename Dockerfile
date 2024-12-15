@@ -2,12 +2,14 @@
 FROM composer:2 AS composer-builder
 WORKDIR /app
 
-# Copy only composer files and install dependencies
+# Copy composer files and install dependencies
 COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-scripts --no-autoloader --ignore-platform-reqs
 
-# Copy the rest of the project and set up autoloader
+# Copy project files
 COPY . .
+
+# Ensure storage and cache directories exist and have proper permissions
 RUN mkdir -p storage/framework/{cache,views,sessions} bootstrap/cache && \
     chmod -R 777 storage bootstrap/cache && \
     composer dump-autoload --no-dev --optimize
@@ -36,9 +38,11 @@ COPY --from=composer-builder /app/vendor /var/www/html/vendor
 COPY --from=node-builder /app/build /var/www/html/public/js
 
 # Optimize Laravel setup
-RUN composer dump-autoload --no-dev --optimize && \
+RUN php artisan config:clear && \
     php artisan config:cache && \
-    php artisan route:cache
+    php artisan route:clear && \
+    php artisan route:cache && \
+    chmod -R 777 storage bootstrap/cache
 
 # Environment Variables
 ENV WEBROOT /var/www/html/public
