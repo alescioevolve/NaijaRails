@@ -1,6 +1,7 @@
 import React from "react";
 import { Head, useForm } from "@inertiajs/react";
-import { useRoute } from "../../../../vendor/tightenco/ziggy";
+// import { useRoute } from "../../../../vendor/tightenco/ziggy";
+import { useRoute } from "ziggy";
 
 export default function EditPost({ post }) {
     const { data, setData, put, processing, errors } = useForm({
