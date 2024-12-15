@@ -18,11 +18,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        // User::factory()->create([
-        //     'name' => 'admin',
-        //     'email' => 'admin@naijarails.com',
-        //     'password' => bcrypt('admin1234'),
-        // ]);
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@naijarails.com',
+            'password' => bcrypt('admin1234'),
+        ]);
 
         User::factory(10)->create();
 
