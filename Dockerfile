@@ -1,26 +1,28 @@
-# Stage 1: Build the React.js (Inertia.js) frontend
+# Stage 1: Composer Dependencies
+FROM composer:2 AS composer-builder
+WORKDIR /var/www/html
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --no-scripts --no-autoloader
+
+# Stage 2: Node.js Build
 FROM node:16 AS node-builder
 WORKDIR /app
 # Copy the entire project
 COPY . .
+# Copy Composer vendor directory from previous stage
+COPY --from=composer-builder /var/www/html/vendor /app/vendor
 # Install dependencies and build the assets
 RUN npm install && npm run build
 
-# Stage 2: Composer dependencies
-FROM composer:2 AS composer-builder
-WORKDIR /var/www/html
-# Copy only the files needed for composer
-COPY composer.json composer.lock ./
-# Install dependencies without dev dependencies
-RUN composer install --no-dev --no-scripts --no-autoloader
-
 # Stage 3: Final production image
 FROM richarvey/nginx-php-fpm:3.1.6
-# Set working directory
 WORKDIR /var/www/html
 
 # Copy the entire project
 COPY . .
+
+# Copy Composer dependencies
+COPY --from=composer-builder /var/www/html/vendor /var/www/html/vendor
 
 # Copy built assets from node-builder
 COPY --from=node-builder /app/build /var/www/html/public/js
