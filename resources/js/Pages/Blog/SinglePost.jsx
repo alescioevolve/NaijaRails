@@ -1,6 +1,6 @@
 import React from "react";
 import { Head, Link, useForm } from "@inertiajs/react";
-import { useRoute } from "../../../../vendor/tightenco/ziggy";
+import { useRoute } from "ziggy";
 
 export default function SinglePost({ post }) {
     const route = useRoute(Ziggy);
