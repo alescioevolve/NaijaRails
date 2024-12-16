@@ -21,7 +21,8 @@ FROM richarvey/nginx-php-fpm:3.1.6
 COPY . .
 
 # Install dependencies (without dev dependencies)
-RUN composer install --no-dev --optimize-autoloader
+# RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader --prefer-dist --no-scripts
 
 # Cache Laravel configs
 RUN php artisan config:cache && \
