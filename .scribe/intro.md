@@ -3,7 +3,7 @@
 This is the API documentation for NaijaRails.
 
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:5173</code>
+    <strong>Base URL</strong>: <code>https://naijarails.onrender.com</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.
