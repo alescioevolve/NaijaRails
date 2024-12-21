@@ -23,8 +23,8 @@ COPY . .
 # Install dependencies (without dev dependencies)
 RUN composer install --no-dev --optimize-autoloader
 
-# Publlish php artisan livewire
-RUN php artisan livewire:publish
+# Publish Livewire and Scribe assets
+RUN php artisan livewire:publish --force && php artisan scribe:generate
 
 # Cache Laravel configs
 RUN php artisan config:cache && \
@@ -49,6 +49,9 @@ ENV LOG_CHANNEL stderr
 
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
+
+# Expose the application port
+EXPOSE 80
 
 # Start the container
 CMD ["/start.sh"]

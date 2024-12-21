@@ -1,8 +1,18 @@
 #00-laravel-deploy.sh
 
 #!/usr/bin/env bash
+
+set -e  # Exit immediately if a command exits with a non-zero status
+echo "Starting Laravel deployment script"
+
+# Ensure the Laravel environment is ready
+if [ ! -f .env ]; then
+    echo "Error: .env file not found. Exiting."
+    exit 1
+fi
+
 echo "Running npm install"
-npm install
+npm install --no-fund
 
 echo "Running npm run build"
 npm run build
@@ -10,9 +20,12 @@ npm run build
 echo "Running composer"
 composer install --no-dev --working-dir=/var/www/html
 
- 
-echo "Publishing Livewire..."
-php php artisan livewire:publish
+# Publish assets (Livewire, Scribe, etc.)
+echo "Publishing Livewire assets..."
+php artisan livewire:publish --force
+
+echo "Generating Scribe API documentation..."
+php artisan scribe:generate
 
 echo "Caching config..."
 php artisan config:cache
@@ -29,5 +42,5 @@ php artisan db:seed --force
 echo "Optimizing Filament..."
 php artisan filament:optimize
 
-echo "Generate API docs.."
-php artisan scribe:generate
+echo "Laravel deployment script completed successfully."
+
