@@ -21,11 +21,11 @@ echo "Running composer"
 composer install --no-dev --working-dir=/var/www/html
 
 # Publish assets (Livewire, Scribe, etc.)
-echo "Publishing Livewire assets..."
-php artisan livewire:publish
+# echo "Publishing Livewire assets..."
+# php artisan livewire:publish
 
-echo "Generating Scribe API documentation..."
-php artisan scribe:generate
+# echo "Generating Scribe API documentation..."
+# php artisan scribe:generate
 
 echo "Caching config..."
 php artisan config:cache
