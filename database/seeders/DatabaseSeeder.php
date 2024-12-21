@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        Post::factory(10)->create();
 
         User::factory()->create([
             'name' => 'admin',
@@ -30,7 +31,6 @@ class DatabaseSeeder extends Seeder
         Ticket::factory(10)->create();
         Payment::factory(10)->create();
 
-        Post::factory(10)->create();
 
     }
 }
