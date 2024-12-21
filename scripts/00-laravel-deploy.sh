@@ -10,6 +10,10 @@ npm run build
 echo "Running composer"
 composer install --no-dev --working-dir=/var/www/html
 
+ 
+echo "Publishing Livewire..."
+php php artisan livewire:publish
+
 echo "Caching config..."
 php artisan config:cache
 

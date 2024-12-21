@@ -23,6 +23,9 @@ COPY . .
 # Install dependencies (without dev dependencies)
 RUN composer install --no-dev --optimize-autoloader
 
+# Publlish php artisan livewire
+RUN php artisan livewire:publish
+
 # Cache Laravel configs
 RUN php artisan config:cache && \
     php artisan route:cache
