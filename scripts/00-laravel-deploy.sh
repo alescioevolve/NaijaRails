@@ -22,7 +22,7 @@ composer install --no-dev --working-dir=/var/www/html
 
 # Publish assets (Livewire, Scribe, etc.)
 echo "Publishing Livewire assets..."
-php artisan livewire:publish --force
+php artisan livewire:publish
 
 echo "Generating Scribe API documentation..."
 php artisan scribe:generate

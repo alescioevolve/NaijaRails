@@ -24,7 +24,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Publish Livewire and Scribe assets
-RUN php artisan livewire:publish --force 
+RUN php artisan livewire:publish
 
 RUN php artisan scribe:generate
 
