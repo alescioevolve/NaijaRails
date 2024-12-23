@@ -24,7 +24,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Publish Livewire and Scribe assets
-# RUN php artisan livewire:publish
+RUN php artisan livewire:publish
 
 # RUN php artisan scribe:generate
 
@@ -53,7 +53,7 @@ ENV LOG_CHANNEL stderr
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # Expose the application port
-EXPOSE 80
+# EXPOSE 80
 
 # Start the container
 CMD ["/start.sh"]
