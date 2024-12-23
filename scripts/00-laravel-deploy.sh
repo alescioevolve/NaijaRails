@@ -28,10 +28,10 @@ echo "Caching routes..."
 php artisan route:cache
 
 echo "Running migrations..."
-php artisan migrate --force
+php artisan migrate
 
 echo "Running seeder..."
-php artisan db:seed --force
+php artisan db:seed 
 
 echo "Optimizing Filament..."
 php artisan filament:optimize
