@@ -24,9 +24,9 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Publish Livewire and Scribe assets
-RUN php artisan livewire:publish
+# RUN php artisan livewire:publish
 
-RUN php artisan scribe:generate
+# RUN php artisan scribe:generate
 
 # Cache Laravel configs
 RUN php artisan config:cache && \

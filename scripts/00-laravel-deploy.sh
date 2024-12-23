@@ -5,14 +5,8 @@
 set -e  # Exit immediately if a command exits with a non-zero status
 echo "Starting Laravel deployment script"
 
-# Ensure the Laravel environment is ready
-if [ ! -f .env ]; then
-    echo "Error: .env file not found. Exiting."
-    exit 1
-fi
-
 echo "Running npm install"
-npm install --no-fund
+npm install 
 
 echo "Running npm run build"
 npm run build
