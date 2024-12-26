@@ -23,7 +23,10 @@ WORKDIR /var/www/html
 COPY . ./
 
 # Install PHP dependencies without dev dependencies
-RUN composer install --no-dev --optimize-autoloader --working-dir=/var/www/html
+# RUN composer install --no-dev --optimize-autoloader --working-dir=/var/www/html
+
+RUN composer clear-cache && \
+    composer install --no-dev --optimize-autoloader --working-dir=/var/www/html
 
 # Fix PHP-FPM socket permissions
 RUN mkdir -p /var/run/php && \
