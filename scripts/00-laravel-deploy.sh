@@ -6,6 +6,9 @@ echo "Starting Laravel deployment script"
 echo "Running composer to install dependencies"
 composer install --no-dev --working-dir=/var/www/html
 
+echo "Publishing Livewire assets..."
+php artisan livewire:publish
+
 echo "Caching config..."
 php artisan config:cache
 
