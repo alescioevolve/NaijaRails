@@ -4,23 +4,11 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PostController;
-// use App\Http\Controllers\AuthController;
 
-// For NaijaRails - Homepage single GET route 
 // In routes/web.php or routes/filament.php
 Route::get('/admin/login', function () {
     return view('filament.auth.login');
 })->name('filament.login');
-
-// Route::post('/admin/login', [AuthController::class, 'login'])->name('filament.login.post');
-
-// Route::middleware(['web', 'guest'])->group(function () {
-//     Route::get('/admin/login', function () {
-//         return view('filament.auth.login');
-//     });
-//     Route::post('/admin/login', [AuthController::class, 'login']);
-// });
-
 
 Route::get('/', function () {
     // return view('welcome');

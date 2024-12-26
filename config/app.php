@@ -123,9 +123,11 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    // 'providers' => [
-    //     // Other providers...
-    //     Knuckles\Scribe\ScribeServiceProvider::class,
-    // ],
+    'providers' => [
+        Filament\FilamentServiceProvider::class,
+
+        // Other providers...
+        // Knuckles\Scribe\ScribeServiceProvider::class,
+    ],
 
 ];
