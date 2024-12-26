@@ -125,6 +125,7 @@ return [
 
     'providers' => [
         Filament\FilamentServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
 
         // Other providers...
         // Knuckles\Scribe\ScribeServiceProvider::class,
