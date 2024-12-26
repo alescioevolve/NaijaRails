@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Head, Link, usePage } from "@inertiajs/react";
 import FlashMessage from "../Components/FlashMessage";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export default function Layout({ children }) {
     return (
@@ -37,6 +38,7 @@ export default function Layout({ children }) {
                 </nav>
             </header> */}
             <Navbar />
+            <Footer />
             <main>
                 <FlashMessage />
 
