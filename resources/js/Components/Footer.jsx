@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
     return (
-        <div className="bg-green-50 w-full py-5 px-10">
-            <footer class="bg-white dark:bg-gray-900">
-                <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="bg-green-50 w-full ">
+            <footer class="bg-[#07561A]">
+                <div class="mx-auto w-[full] max-w-screen-xl p-4 py-6 lg:py-12">
                     <div class="md:flex md:justify-between">
                         <div class="mb-6 md:mb-0">
                             <a href="/" class="flex items-center">
@@ -17,13 +17,23 @@ function Footer() {
                                     NaijaRails
                                 </span>
                             </a>
+                            <div className="text-gray-200">
+                                <h2 className="pt-4 pb-0 text-lg font-semibold">
+                                    Planning your next trip?
+                                </h2>
+                                <p className="pt-0">
+                                    Naija Rails is a community-driven platform
+                                    that connects Nigerians and locals with
+                                    Nigerian businesses and services.
+                                </p>
+                            </div>
                         </div>
                         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                                     AboutUs
                                 </h2>
-                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <ul class="text-gray-500 dark:text-gray-200 font-medium">
                                     <li class="mb-4">
                                         <a
                                             href="https://flowbite.com/"
@@ -46,7 +56,7 @@ function Footer() {
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                                     Follow
                                 </h2>
-                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <ul class="text-gray-500 dark:text-gray-200 font-medium">
                                     <li class="mb-4">
                                         <a
                                             href="https://github.com/themesberg/flowbite"
@@ -69,7 +79,7 @@ function Footer() {
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                                     Legal
                                 </h2>
-                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <ul class="text-gray-500 dark:text-gray-200 font-medium">
                                     <li class="mb-4">
                                         <a href="#" class="hover:underline">
                                             Privacy Policy
@@ -96,7 +106,7 @@ function Footer() {
                         <div class="flex mt-4 sm:justify-center sm:mt-0">
                             <a
                                 href="#"
-                                class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -115,7 +125,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -130,7 +140,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -149,7 +159,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -168,7 +178,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"

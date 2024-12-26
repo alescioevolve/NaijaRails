@@ -1,14 +1,15 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PostController;
 
 // In routes/web.php or routes/filament.php
-Route::get('/admin/login', function () {
-    return view('filament.auth.login');
-})->name('filament.login');
+// Route::get('/admin/login', function () {
+//     return view('filament.auth.login');
+// })->name('filament.login');
 
 Route::get('/', function () {
     // return view('welcome');
@@ -16,6 +17,9 @@ Route::get('/', function () {
 });
 
 Route::inertia('/about', 'About/About');
+Route::inertia('/contact', 'Contact/Contact');
+Route::inertia('/faq', 'FAQ/FAQ');
+// Route::inertia('/schedules', 'Schedules/Schedules');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard/Dashboard', ['name' => 'Alescio Elochukwu']);
@@ -38,6 +42,7 @@ Route::inertia('/about', 'About/About');
 // Route::get('/', [PostController::class, 'index'])->name('posts.index'); to define and name a route, then call the controller method
 
 Route::resource('blogs', HomeController::class);
+Route::resource('schedules', ScheduleController::class);
 
 Route::resource('posts', PostController::class);
 
