@@ -25,6 +25,10 @@ COPY . ./
 # Install PHP dependencies without dev dependencies
 RUN composer install --no-dev --optimize-autoloader --working-dir=/var/www/html
 
+# Fix PHP-FPM socket permissions
+RUN mkdir -p /var/run/php && \
+    chown -R www-data:www-data /var/run/php
+
 # Copy built frontend assets from node-builder
 COPY --from=node-builder /app/public/build /var/www/html/public/build
 
