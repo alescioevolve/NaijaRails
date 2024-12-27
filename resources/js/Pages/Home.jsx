@@ -15,11 +15,11 @@ export default function Home({ name }) {
             <Head title={component} />
 
             <div className="w-full">
-                <Banner />
-                <SearchRoutes className="mx-2 z-50" />
+                <Banner className="mx-10" />
+                <SearchRoutes className="mx-1" />
             </div>
             <div className="overflow-hidden mx-2">
-                <h1 className="title">Home Page</h1>
+                <h1 className="title">Popular Travel Destinations</h1>
                 <BookingRoutes />
                 <BookingUi />
                 <ReviewUi />

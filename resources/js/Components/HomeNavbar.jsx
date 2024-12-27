@@ -1,70 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 
 function HomeNavbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <div className="bg-green-50 w-full py-5 px-10">
-            <div class="max-w-screen-3xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a
-                    href="/"
-                    class="flex items-center space-x-1 rtl:space-x-reverse"
-                >
-                    <img src="/favicon.ico" class="h-10" alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        <span className="text-green-900">Naija</span>
-                        <span className="text-black">Rails</span>
+        <div className="bg-green-50 w-full py-1 px-4 sm:px-6 md:px-10 sticky top-0 z-50">
+            <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 flex-wrap">
+                {/* Logo Section */}
+                <a href="/" className="flex items-center space-x-2">
+                    <img
+                        src="/favicon.ico"
+                        className="h-8 md:h-10"
+                        alt="Logo"
+                    />
+                    <span className="text-xl md:text-2xl font-semibold text-green-900">
+                        Naija<span className="text-black">Rails</span>
                     </span>
                 </a>
-                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <button
-                        type="button"
-                        class="
-                        text-black font-medium rounded-2xl text-sm px-10 mx-2 py-3 text-center border-2 border-green-700
-                         dark:hover:bg-green-700 dark:focus:ring-green-800
-                        "
+
+                {/* Login Button */}
+                <button className="text-white font-medium rounded-2xl text-sm px-10 py-2 bg-green-700 md:hidden -mr-10">
+                    Login
+                </button>
+
+                {/* Hamburger Button */}
+                <button
+                    onClick={toggleMenu}
+                    type="button"
+                    className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky"
+                    aria-expanded={isMenuOpen}
+                >
+                    <span className="sr-only">Open main menu</span>
+                    <svg
+                        className="w-5 h-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 17 14"
                     >
-                        Login
-                    </button>
-                    <button
-                        type="button"
-                        class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-2xl text-sm px-10 mx-2 py-3 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-                    >
-                        SignUp
-                    </button>
-                    <button
-                        data-collapse-toggle="navbar-sticky"
-                        type="button"
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="navbar-sticky"
-                        aria-expanded="false"
-                    >
-                        <span class="sr-only">Open main menu</span>
-                        <svg
-                            class="w-5 h-5"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 17 14"
-                        >
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M1 1h15M1 7h15M1 13h15"
-                            />
-                        </svg>
-                    </button>
-                </div>
+                        <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M1 1h15M1 7h15M1 13h15"
+                        />
+                    </svg>
+                </button>
+
+                {/* Navigation Menu */}
                 <div
-                    class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                    className={`${
+                        isMenuOpen ? "block" : "hidden"
+                    } w-full md:flex md:w-auto`}
                     id="navbar-sticky"
                 >
-                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                    <ul className="flex flex-col md:flex-row md:space-x-8 p-4 md:p-0 mt-4 md:mt-0 space-y-4 md:space-y-0">
                         <li>
                             <a
                                 href="/"
-                                class="block py-2 px-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 md:dark:text-green-500"
-                                aria-current="page"
+                                className="block py-2 px-3 text-green-700 hover:text-green-900 md:hover:bg-transparent md:p-0"
                             >
                                 Home
                             </a>
@@ -72,7 +71,7 @@ function HomeNavbar() {
                         <li>
                             <a
                                 href="/schedules"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-green-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700"
+                                className="block py-2 px-3 text-gray-900 hover:text-green-700 md:hover:bg-transparent md:p-0"
                             >
                                 Trains Schedule
                             </a>
@@ -80,7 +79,7 @@ function HomeNavbar() {
                         <li>
                             <a
                                 href="/faq"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-green-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700"
+                                className="block py-2 px-3 text-gray-900 hover:text-green-700 md:hover:bg-transparent md:p-0"
                             >
                                 FAQ
                             </a>
@@ -88,12 +87,22 @@ function HomeNavbar() {
                         <li>
                             <a
                                 href="/contact"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-green-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700"
+                                className="block py-2 px-3 text-gray-900 hover:text-green-700 md:hover:bg-transparent md:p-0"
                             >
                                 HelpDesk
                             </a>
                         </li>
                     </ul>
+                </div>
+
+                {/* SignUp Button */}
+                <div className="hidden md:flex gap-2">
+                    <button className="text-black font-medium rounded-2xl text-sm px-20 py-2 border-2 border-green-700">
+                        Login
+                    </button>
+                    <button className="text-white bg-green-700 hover:bg-green-800 font-medium rounded-2xl text-sm px-20 py-2">
+                        SignUp
+                    </button>
                 </div>
             </div>
         </div>
