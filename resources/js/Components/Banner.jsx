@@ -4,10 +4,11 @@ function Banner() {
     return (
         <>
             {/* -ml-[10%] */}
-            <div className="w-[100%] md:w-[140%] md:-ml-[20%]">
+            {/* <div className="w-[100%] md:w-[100%] mx-auto md:-ml-[20%]"> */}
+            <div className="w-[100%] mx-auto px-5">
                 <div className="relative mx-auto overflow-hidden">
                     <div
-                        className="w-full h-[350px] md:h-[400px] rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
+                        className="w-full h-[350px] md:h-[450px] rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
                         style={{
                             backgroundImage: "url(/banner.png)",
                             backgroundSize: "cover",
@@ -15,7 +16,7 @@ function Banner() {
                         }}
                     >
                         <div className="absolute inset-0 bg-black bg-opacity-30 rounded-2xl"></div>
-                        <div className="absolute top-8 left-0 right-0 px-4 pb-4 text-center flex flex-col justify-end items-center">
+                        <div className="absolute top-20 left-0 right-0 px-4 pb-4 text-center flex flex-col justify-end items-center">
                             {/* Hero Content */}
                             <div className="hero-content text-white">
                                 <h2 className="text-2xl md:text-3xl mb-2">

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Schedule;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,12 +15,35 @@ class ScheduleFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Schedule::class;
     public function definition(): array
     {
+        // Array of possible origin and destination values
+        $locations = [
+            'Abuja',
+            'Kaduna',
+            'Lagos',
+            'Oyo',
+            'Port Harcourt',
+            'Maiduguri',
+            'Kano',
+            'Kafanchan',
+            'Enugu',
+            'Warri-Itakpe',
+            'Zaria',
+            'Bauchi',
+            'Ogun',
+            'Cross River'
+        ];
+
+        $origin = $this->faker->randomElement($locations);
+        $destination = $this->faker->randomElement(array_diff($locations, [$origin])); // Ensure origin != destination
+
         return [
             'train_name' => $this->faker->company . ' Express',
-            'origin' => $this->faker->city,
-            'destination' => $this->faker->city,
+            'origin' => $origin,
+            'destination' => $destination,
             'departure_time' => $this->faker->dateTimeBetween('now', '+1 week'),
             'arrival_time' => $this->faker->dateTimeBetween('+1 week', '+2 weeks'),
             'train_class' => $this->faker->randomElement(['Economy', 'Business', 'First Class']),

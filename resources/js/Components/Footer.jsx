@@ -10,10 +10,10 @@ function Footer() {
                             <a href="/" class="flex items-center">
                                 <img
                                     src="/favicon.ico"
-                                    class="h-8 me-3"
-                                    alt="FlowBite Logo"
+                                    class="h-10 me-3"
+                                    alt="NaijaRails Logo"
                                 />
-                                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                                <span class="self-center text-3xl text-white font-extrabold whitespace-nowrap">
                                     NaijaRails
                                 </span>
                             </a>
@@ -30,10 +30,10 @@ function Footer() {
                         </div>
                         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                                <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase">
                                     AboutUs
                                 </h2>
-                                <ul class="text-gray-500 dark:text-gray-200 font-medium">
+                                <ul class="text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <a
                                             href="https://flowbite.com/"
@@ -53,10 +53,10 @@ function Footer() {
                                 </ul>
                             </div>
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                                <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase">
                                     Follow
                                 </h2>
-                                <ul class="text-gray-500 dark:text-gray-200 font-medium">
+                                <ul class="text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <a
                                             href="https://github.com/themesberg/flowbite"
@@ -76,10 +76,10 @@ function Footer() {
                                 </ul>
                             </div>
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                                <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase">
                                     Legal
                                 </h2>
-                                <ul class="text-gray-500 dark:text-gray-200 font-medium">
+                                <ul class="text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <a href="#" class="hover:underline">
                                             Privacy Policy
@@ -94,9 +94,9 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                    <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                     <div class="sm:flex sm:items-center sm:justify-between">
-                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                        <span class="text-sm text-gray-300 sm:text-center">
                             © 2024{" "}
                             <a href="/" class="hover:underline">
                                 NaijaRails™
@@ -106,7 +106,7 @@ function Footer() {
                         <div class="flex mt-4 sm:justify-center sm:mt-0">
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                                class="text-gray-400 hover:text-gray-900"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -125,7 +125,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -140,7 +140,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -159,7 +159,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"
@@ -178,7 +178,7 @@ function Footer() {
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-gray-900 dark:hover:text-white ms-5"
+                                class="text-gray-400 hover:text-gray-900 ms-5"
                             >
                                 <svg
                                     class="w-4 h-4"

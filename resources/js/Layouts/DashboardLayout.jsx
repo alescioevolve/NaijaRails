@@ -4,8 +4,9 @@ import { Link } from "@inertiajs/react";
 export default function DashboardLayout({ children }) {
     return (
         <>
-            <header className="sticky top-0 z-10 grid grid-cols-4 items-center gap-2 py-5 md:grid-cols-3">
-                <nav>
+            <header>
+                {/* className="sticky top-0 z-10 grid grid-cols-4 items-center gap-2 py-5 md:grid-cols-3" */}
+                {/* <nav>
                     <Link className="nav-link" href="/">
                         Home
                     </Link>
@@ -15,7 +16,7 @@ export default function DashboardLayout({ children }) {
                     <Link className="nav-link" href="/create">
                         Logout
                     </Link>
-                </nav>
+                </nav> */}
             </header>
             <main>{children}</main>
         </>

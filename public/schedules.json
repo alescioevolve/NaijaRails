@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "train_name": "Abuja Express",
+        "origin": "Abuja",
+        "destination": "Kaduna",
+        "date": "2025-01-01",
+        "trainClass": "Economy",
+        "price": "₦5,000"
+    },
+    {
+        "id": 2,
+        "train_name": "Lagos Commuter",
+        "origin": "Lagos",
+        "destination": "Oyo",
+        "date": "2025-01-01",
+        "trainClass": "First Class",
+        "price": "₦7,500"
+    },
+    {
+        "id": 3,
+        "train_name": "Port Harcourt Flyer",
+        "origin": "Port Harcourt",
+        "destination": "Maiduguri",
+        "date": "2025-01-02",
+        "trainClass": "Economy",
+        "price": "₦10,000"
+    },
+    {
+        "id": 4,
+        "train_name": "Kano Rapid",
+        "origin": "Kano",
+        "destination": "Kafanchan",
+        "date": "2025-01-03",
+        "trainClass": "First Class",
+        "price": "₦8,000"
+    },
+    {
+        "id": 5,
+        "train_name": "Enugu Intercity",
+        "origin": "Enugu",
+        "destination": "Warri-Itakpe",
+        "date": "2025-01-04",
+        "trainClass": "Economy",
+        "price": "₦6,500"
+    },
+    {
+        "id": 6,
+        "train_name": "Zaria Cruiser",
+        "origin": "Zaria",
+        "destination": "Bauchi",
+        "date": "2025-01-05",
+        "trainClass": "First Class",
+        "price": "₦7,000"
+    },
+    {
+        "id": 7,
+        "train_name": "Ogun Shuttle",
+        "origin": "Ogun",
+        "destination": "Cross River",
+        "date": "2025-01-06",
+        "trainClass": "Economy",
+        "price": "₦9,000"
+    },
+    {
+        "id": 8,
+        "train_name": "Kaduna Connector",
+        "origin": "Kaduna",
+        "destination": "Abuja",
+        "date": "2025-01-07",
+        "trainClass": "Economy",
+        "price": "₦4,500"
+    },
+    {
+        "id": 9,
+        "train_name": "Oyo Bullet",
+        "origin": "Oyo",
+        "destination": "Lagos",
+        "date": "2025-01-08",
+        "trainClass": "First Class",
+        "price": "₦7,500"
+    },
+    {
+        "id": 10,
+        "train_name": "Maiduguri Navigator",
+        "origin": "Maiduguri",
+        "destination": "Port Harcourt",
+        "date": "2025-01-09",
+        "trainClass": "Economy",
+        "price": "₦11,000"
+    },
+    {
+        "id": 11,
+        "train_name": "Kafanchan Swift",
+        "origin": "Kafanchan",
+        "destination": "Kano",
+        "date": "2025-01-10",
+        "trainClass": "First Class",
+        "price": "₦8,500"
+    },
+    {
+        "id": 12,
+        "train_name": "Warri-Itakpe Express",
+        "origin": "Warri-Itakpe",
+        "destination": "Enugu",
+        "date": "2025-01-11",
+        "trainClass": "Economy",
+        "price": "₦6,000"
+    },
+    {
+        "id": 13,
+        "train_name": "Bauchi Striker",
+        "origin": "Bauchi",
+        "destination": "Zaria",
+        "date": "2025-01-12",
+        "trainClass": "Economy",
+        "price": "₦5,500"
+    },
+    {
+        "id": 14,
+        "train_name": "Cross River Liner",
+        "origin": "Cross River",
+        "destination": "Ogun",
+        "date": "2025-01-13",
+        "trainClass": "First Class",
+        "price": "₦9,500"
+    },
+    {
+        "id": 15,
+        "train_name": "Abuja Flyer",
+        "origin": "Abuja",
+        "destination": "Lagos",
+        "date": "2025-01-14",
+        "trainClass": "Economy",
+        "price": "₦8,000"
+    },
+    {
+        "id": 16,
+        "train_name": "Kaduna Streamliner",
+        "origin": "Kaduna",
+        "destination": "Port Harcourt",
+        "date": "2025-01-15",
+        "trainClass": "First Class",
+        "price": "₦11,500"
+    },
+    {
+        "id": 17,
+        "train_name": "Kano Navigator",
+        "origin": "Kano",
+        "destination": "Bauchi",
+        "date": "2025-01-16",
+        "trainClass": "Economy",
+        "price": "₦5,200"
+    },
+    {
+        "id": 18,
+        "train_name": "Enugu Sprinter",
+        "origin": "Enugu",
+        "destination": "Abuja",
+        "date": "2025-01-17",
+        "trainClass": "Economy",
+        "price": "₦8,700"
+    },
+    {
+        "id": 19,
+        "train_name": "Lagos Cruiser",
+        "origin": "Lagos",
+        "destination": "Kaduna",
+        "date": "2025-01-18",
+        "trainClass": "First Class",
+        "price": "₦9,300"
+    },
+    {
+        "id": 20,
+        "train_name": "Maiduguri Flyer",
+        "origin": "Maiduguri",
+        "destination": "Warri-Itakpe",
+        "date": "2025-01-19",
+        "trainClass": "Economy",
+        "price": "₦10,500"
+    },
+    {
+        "id": 21,
+        "train_name": "Kafanchan Connector",
+        "origin": "Kafanchan",
+        "destination": "Cross River",
+        "date": "2025-01-20",
+        "trainClass": "First Class",
+        "price": "₦12,000"
+    },
+    {
+        "id": 22,
+        "train_name": "Warri Cruiser",
+        "origin": "Warri-Itakpe",
+        "destination": "Oyo",
+        "date": "2025-01-21",
+        "trainClass": "Economy",
+        "price": "₦7,800"
+    },
+    {
+        "id": 23,
+        "train_name": "Cross River Streamliner",
+        "origin": "Cross River",
+        "destination": "Zaria",
+        "date": "2025-01-22",
+        "trainClass": "Economy",
+        "price": "₦9,200"
+    },
+    {
+        "id": 24,
+        "train_name": "Zaria Commuter",
+        "origin": "Zaria",
+        "destination": "Maiduguri",
+        "date": "2025-01-23",
+        "trainClass": "First Class",
+        "price": "₦11,000"
+    },
+    {
+        "id": 25,
+        "train_name": "Ogun Express",
+        "origin": "Ogun",
+        "destination": "Kaduna",
+        "date": "2025-01-24",
+        "trainClass": "Economy",
+        "price": "₦8,300"
+    },
+    {
+        "id": 26,
+        "train_name": "Kaduna Flyer",
+        "origin": "Kaduna",
+        "destination": "Lagos",
+        "date": "2025-01-25",
+        "trainClass": "First Class",
+        "price": "₦9,500"
+    },
+    {
+        "id": 27,
+        "train_name": "Port Harcourt Bullet",
+        "origin": "Port Harcourt",
+        "destination": "Ogun",
+        "date": "2025-01-26",
+        "trainClass": "Economy",
+        "price": "₦10,200"
+    },
+    {
+        "id": 28,
+        "train_name": "Maiduguri Navigator",
+        "origin": "Maiduguri",
+        "destination": "Abuja",
+        "date": "2025-01-27",
+        "trainClass": "First Class",
+        "price": "₦11,800"
+    },
+    {
+        "id": 29,
+        "train_name": "Enugu Connector",
+        "origin": "Enugu",
+        "destination": "Warri-Itakpe",
+        "date": "2025-01-28",
+        "trainClass": "Economy",
+        "price": "₦6,500"
+    },
+    {
+        "id": 30,
+        "train_name": "Oyo Sprinter",
+        "origin": "Oyo",
+        "destination": "Cross River",
+        "date": "2025-01-29",
+        "trainClass": "First Class",
+        "price": "₦12,300"
+    },
+    {
+        "id": 31,
+        "train_name": "Kaduna Streamliner",
+        "origin": "Kaduna",
+        "destination": "Bauchi",
+        "date": "2025-01-30",
+        "trainClass": "Economy",
+        "price": "₦7,000"
+    },
+    {
+        "id": 32,
+        "train_name": "Cross River Rapid",
+        "origin": "Cross River",
+        "destination": "Kano",
+        "date": "2025-01-31",
+        "trainClass": "First Class",
+        "price": "₦10,000"
+    },
+    {
+        "id": 33,
+        "train_name": "Lagos Connector",
+        "origin": "Lagos",
+        "destination": "Zaria",
+        "date": "2025-02-01",
+        "trainClass": "Economy",
+        "price": "₦6,500"
+    },
+    {
+        "id": 34,
+        "train_name": "Maiduguri Liner",
+        "origin": "Maiduguri",
+        "destination": "Kaduna",
+        "date": "2025-02-02",
+        "trainClass": "First Class",
+        "price": "₦8,700"
+    },
+    {
+        "id": 35,
+        "train_name": "Warri-Itakpe Express",
+        "origin": "Warri-Itakpe",
+        "destination": "Lagos",
+        "date": "2025-02-03",
+        "trainClass": "Economy",
+        "price": "₦9,200"
+    },
+    {
+        "id": 36,
+        "train_name": "Kano Bullet",
+        "origin": "Kano",
+        "destination": "Port Harcourt",
+        "date": "2025-02-04",
+        "trainClass": "First Class",
+        "price": "₦12,000"
+    },
+    {
+        "id": 37,
+        "train_name": "Zaria Cruiser",
+        "origin": "Zaria",
+        "destination": "Enugu",
+        "date": "2025-02-05",
+        "trainClass": "Economy",
+        "price": "₦7,500"
+    },
+    {
+        "id": 38,
+        "train_name": "Abuja Rapid",
+        "origin": "Abuja",
+        "destination": "Ogun",
+        "date": "2025-02-06",
+        "trainClass": "First Class",
+        "price": "₦11,300"
+    },
+    {
+        "id": 39,
+        "train_name": "Kaduna Flyer",
+        "origin": "Kaduna",
+        "destination": "Oyo",
+        "date": "2025-02-07",
+        "trainClass": "Economy",
+        "price": "₦6,800"
+    },
+    {
+        "id": 40,
+        "train_name": "Enugu Streamliner",
+        "origin": "Enugu",
+        "destination": "Warri-Itakpe",
+        "date": "2025-02-08",
+        "trainClass": "First Class",
+        "price": "₦10,500"
+    },
+    {
+        "id": 41,
+        "train_name": "Oyo Navigator",
+        "origin": "Oyo",
+        "destination": "Bauchi",
+        "date": "2025-02-09",
+        "trainClass": "Economy",
+        "price": "₦7,700"
+    },
+    {
+        "id": 42,
+        "train_name": "Port Harcourt Express",
+        "origin": "Port Harcourt",
+        "destination": "Cross River",
+        "date": "2025-02-10",
+        "trainClass": "First Class",
+        "price": "₦12,700"
+    },
+    {
+        "id": 43,
+        "train_name": "Maiduguri Commuter",
+        "origin": "Maiduguri",
+        "destination": "Abuja",
+        "date": "2025-02-11",
+        "trainClass": "Economy",
+        "price": "₦9,000"
+    },
+    {
+        "id": 44,
+        "train_name": "Cross River Bullet",
+        "origin": "Cross River",
+        "destination": "Lagos",
+        "date": "2025-02-12",
+        "trainClass": "First Class",
+        "price": "₦8,500"
+    },
+    {
+        "id": 45,
+        "train_name": "Warri Cruiser",
+        "origin": "Warri-Itakpe",
+        "destination": "Kano",
+        "date": "2025-02-13",
+        "trainClass": "Economy",
+        "price": "₦9,800"
+    },
+    {
+        "id": 46,
+        "train_name": "Zaria Streamliner",
+        "origin": "Zaria",
+        "destination": "Kaduna",
+        "date": "2025-02-14",
+        "trainClass": "First Class",
+        "price": "₦5,200"
+    },
+    {
+        "id": 47,
+        "train_name": "Ogun Liner",
+        "origin": "Ogun",
+        "destination": "Maiduguri",
+        "date": "2025-02-15",
+        "trainClass": "Economy",
+        "price": "₦11,000"
+    },
+    {
+        "id": 48,
+        "train_name": "Abuja Connector",
+        "origin": "Abuja",
+        "destination": "Cross River",
+        "date": "2025-02-16",
+        "trainClass": "First Class",
+        "price": "₦13,200"
+    },
+    {
+        "id": 49,
+        "train_name": "Kaduna Rapid",
+        "origin": "Kaduna",
+        "destination": "Oyo",
+        "date": "2025-02-17",
+        "trainClass": "Economy",
+        "price": "₦7,400"
+    },
+    {
+        "id": 50,
+        "train_name": "Maiduguri Express",
+        "origin": "Maiduguri",
+        "destination": "Lagos",
+        "date": "2025-02-18",
+        "trainClass": "First Class",
+        "price": "₦14,000"
+    }
+]

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "@inertiajs/react";
 
-function HomeNavbar() {
+function HomeNavbar({ auth }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -23,15 +24,18 @@ function HomeNavbar() {
                 </a>
 
                 {/* Login Button */}
-                <button className="text-white font-medium rounded-2xl text-sm px-10 py-2 bg-green-700 md:hidden -mr-10">
-                    Login
-                </button>
+                <Link
+                    href={route("login")}
+                    className="text-white font-medium rounded-2xl text-sm px-10 py-2 bg-green-700 md:hidden -mr-8"
+                >
+                    Log in
+                </Link>
 
                 {/* Hamburger Button */}
                 <button
                     onClick={toggleMenu}
                     type="button"
-                    className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    className="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="navbar-sticky"
                     aria-expanded={isMenuOpen}
                 >
@@ -96,13 +100,20 @@ function HomeNavbar() {
                 </div>
 
                 {/* SignUp Button */}
+
                 <div className="hidden md:flex gap-2">
-                    <button className="text-black font-medium rounded-2xl text-sm px-20 py-2 border-2 border-green-700">
-                        Login
-                    </button>
-                    <button className="text-white bg-green-700 hover:bg-green-800 font-medium rounded-2xl text-sm px-20 py-2">
+                    <Link
+                        href={route("login")}
+                        className="text-black font-medium rounded-2xl text-sm px-20 py-2 border-2 border-green-700"
+                    >
+                        Log in
+                    </Link>
+                    <Link
+                        href={route("register")}
+                        className="text-white bg-green-700 hover:bg-green-800 font-medium rounded-2xl text-sm px-20 py-2"
+                    >
                         SignUp
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

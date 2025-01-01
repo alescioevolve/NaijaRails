@@ -13,7 +13,7 @@ export default function Schedules({ schedules }) {
                 />
             </Head>
             <div className="my-5">
-                <h1 className="title">View All Train Schedules</h1>
+                <h1 className="text-3xl font-bold">View All Train Schedules</h1>
                 <p className="text-center text-lg my-1 py-1">
                     Here are all the available train schedules. We have{" "}
                     {schedules.length} schedules
@@ -29,7 +29,7 @@ export default function Schedules({ schedules }) {
                                     <img
                                         src="/train-1.svg"
                                         class="h-8 me-3"
-                                        alt="FlowBite Logo"
+                                        alt="NaijaRails Logo"
                                     />
                                     <h2 className="text-xl font-bold text-gray-900">
                                         {schedule.train_name}
@@ -65,7 +65,7 @@ export default function Schedules({ schedules }) {
                                         {schedule.available_seats}
                                     </p>
                                     <p>
-                                        <strong>Price:</strong> &#8358;
+                                        <strong>Price:</strong>
                                         {schedule.price}
                                     </p>
                                 </div>
