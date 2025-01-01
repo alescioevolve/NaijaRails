@@ -14,54 +14,32 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
 
     resolve: (name) => {
-        const pages = import.meta.glob("./Pages/**/*.jsx", { eager: true });
-        let page = pages[`./Pages/${name}.jsx`];
+        const pages = import.meta.glob("./Pages/**/*.jsx");
+        return pages[`./Pages/${name}.jsx`]().then((module) => {
+            const page = module.default;
 
-        console.log("Resolved page:", name, page);
-
-        if (page?.default) {
             // Apply layout conditionally
-            page.default.layout =
-                page.default.layout ||
+            page.layout =
+                page.layout ||
                 ((pageContent) => {
-                    // if (name === "Home") {
                     if (name === "Home" || name === "Pages/Home") {
                         return <HomeLayout>{pageContent}</HomeLayout>; // For homepage
                     }
-                    // if (name === "Login" || name === "Register") {
+
                     if (name.startsWith("Auth/")) {
                         return <HomeLayout>{pageContent}</HomeLayout>; // For auth pages
                     }
 
                     if (name.startsWith("Dashboard")) {
-                        return <DashboardLayout>{pageContent}</DashboardLayout>; // For auth pages
+                        return <DashboardLayout>{pageContent}</DashboardLayout>; // For dashboard pages
                     }
+
                     return <HomeLayout children={pageContent} />; // Default layout
                 });
-        }
 
-        return (
-            page ||
-            resolvePageComponent(
-                `./Pages/${name}.jsx`,
-                import.meta.glob("./Pages/**/*.jsx")
-            )
-        );
+            return page;
+        });
     },
-
-    // resolve: (name) => {
-    //     const pages = import.meta.glob("./Pages/**/*.jsx", { eager: true });
-    //     let page = pages[`./Pages/${name}.jsx`];
-    //     page.default.layout =
-    //         page.default.layout || ((page) => <Layout children={page} />);
-    //     return page;
-    // },
-
-    // resolve: (name) =>
-    //     resolvePageComponent(
-    //         `./Pages/${name}.jsx`,
-    //         import.meta.glob("./Pages/**/*.jsx")
-    //     ),
 
     setup({ el, App, props }) {
         const root = createRoot(el);

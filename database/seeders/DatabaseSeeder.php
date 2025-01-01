@@ -19,13 +19,13 @@ class DatabaseSeeder extends Seeder
     {
         Post::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'admin',
-        //     'email' => 'admin@naijarailss.com',
-        //     'password' => bcrypt('admin1234'),
-        // ]);
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@naijarails.com',
+            'password' => bcrypt('admin1234'),
+        ]);
 
-        // User::factory(10)->create();
+        User::factory(10)->create();
 
         Schedule::factory(10)->create();
         Ticket::factory(10)->create();
