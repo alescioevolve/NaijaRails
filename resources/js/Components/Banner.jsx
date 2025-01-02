@@ -5,7 +5,7 @@ function Banner() {
         <>
             {/* -ml-[10%] */}
             {/* <div className="w-[100%] md:w-[100%] mx-auto md:-ml-[20%]"> */}
-            <div className="w-[100%] mx-auto px-5">
+            <div className="w-[100%] mx-auto -px-5">
                 <div className="relative mx-auto overflow-hidden">
                     <div
                         className="w-full h-[350px] md:h-[450px] rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
@@ -26,7 +26,7 @@ function Banner() {
                                     Live & Travel
                                 </h1>
                                 <p className="text-lg md:text-xl">
-                                    Ember Special offers to suit your travel
+                                    NewYear Special offers to suit your travel
                                     comforts
                                 </p>
                             </div>

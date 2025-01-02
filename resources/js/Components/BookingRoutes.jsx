@@ -25,11 +25,11 @@ function BookingRoutes() {
                 Popular Travel Destinations
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4 mx-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4 mx-1 md:mx-1">
                 {BackImageData.map(({ id, location, description, src }) => (
                     <div
                         key={id}
-                        className="relative mx-10 md:mx-0 h-[300px] md:h-[350px] rounded-2xl overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                        className="relative mx-1 md:mx-0 h-[300px] md:h-[350px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
                         style={{
                             backgroundImage: `url(${src})`,
                             backgroundSize: "cover",

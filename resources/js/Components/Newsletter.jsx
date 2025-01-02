@@ -20,13 +20,13 @@ function Newsletter() {
                         action="#"
                         method="POST"
                     >
-                        <div className="flex">
+                        <div className="flex lg:flex-col">
                             <input
                                 type="email"
                                 name="email"
                                 id="email"
                                 placeholder="Enter your email"
-                                className="border-2 p-2 rounded-md w-[200px]"
+                                className="border-2 p-2 rounded-md w-full lg:w-[200px] md:mb-5"
                             />
                             <button
                                 type="submit"
